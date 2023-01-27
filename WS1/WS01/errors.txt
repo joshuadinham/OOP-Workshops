@@ -1,0 +1,8 @@
+File.cpp:2:18: fatal error: file.h: No such file or directory
+ #include "file.h"
+                  ^
+compilation terminated.
+Movie.cpp:2:19: fatal error: movie.h: No such file or directory
+ #include "movie.h"
+                   ^
+compilation terminated.

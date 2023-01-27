@@ -1,0 +1,39 @@
+/***********************************************************************
+// Workshop 1 p2: reflection
+//
+// File  reflect.txt
+// Version 1.0
+// Date  winter 2023
+// Author Fardad Soleimanloo
+//
+//
+// Revision History
+// -----------------------------------------------------------
+// Name:Joshua Dinham  121572226 Date Jan 26, 2023        Reason
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+One of the concepts covered in this workshop includes namespaces
+
+I learned to define namespaces by using the namespace keyword following by the identifier and keeping pertinent  
+structs, functions, and variables within those brackets in order to have them be accessed outside of the file
+
+To use the name space I used "using namespace" followd by the identifier namespace I wanted to use.
+
+I also utilized modular programming in order to create and test each individual part of the program seperately. 
+The user input associated functions were separated and tested within the UI program.
+The GPAList associated functions were separated and tested within the GPAList program.
+All File related functions were separated and tested within the GPAList program.
+and finally the main.cpp program was used to test all other components of the program when needed by using #include.
+
+The most difficult part of the program was determining the flow of the program. I fixed this by using pseudo-code before writing the program. 
+Another difficult section of the program was opening and reading the file. I fixed this by carefully testing the file related commands used in the Movie program 1 at a time and incomporating it into my code.
+
+Another difficult part of the program was sorting the list of students once I was able to properly read the file.
+I fixed this by learning bubble sort and sorting by stno.
+
+All in all I learned alot and refreshed alot of my memory from last semester and I feel like I'll be able to tackle the next workshops alot faster and with more accuracy. 
+
+
+
+
+
