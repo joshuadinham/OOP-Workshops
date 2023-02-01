@@ -1,0 +1,9 @@
+namespace lab
+{
+    [default_interface]
+    runtimeclass practice : Windows.UI.Xaml.Controls.Page
+    {
+        practice();
+        Int32 MyProperty;
+    }
+}
