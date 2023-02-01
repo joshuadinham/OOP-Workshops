@@ -1,5 +1,9 @@
 # Workshop #2: Dynamic Memory
-* Version v1.0
+* Update V1.1 (content of `correct_output.txt`  corrected)
+* Update V1.2 (DIY main.cpp V1.1, Reordered user's tweets report title)<br />
+* Update V1.3 (**read** function for the user_id, dayofyear, Fwifitime and Fctime, description corrected)<br />
+ 
+  `correct_output.txt` updated to match the change
 
 In this workshop, you will use *references* to modify content of variables in other scopes, overload functions and allocate memory at run-time and deallocate that memory when it is no longer required. 
 
@@ -181,7 +185,7 @@ fscanf(fp, "%60[^\n]\n", ......
 ```
 2. **read** function for the user_id, dayofyear, Fwifitime and Fctime  :<br />
 When success, returns a reference argument to an integer to pass back the user id, dayofyear,Fwifitime and Fctime.
-Use the following fscanf function to read the student number from the file and return true if it returns 1.  
+Use the following fscanf function to read the user_id, dayofyear, Fwifitime and Fctime from the file and return true if it returns 1.  
 ```C
 fscanf(fp, "%d,".......
 ```
@@ -249,7 +253,6 @@ Please do not modify the main Module.
 
 ### Files to submit:  
 ```Text
-main.h
 main.cpp
 Package.h
 Package.cpp
@@ -360,9 +363,9 @@ Adds **a Customer** to the dynamically allocated memory of customers in **Custom
 Prints the Customer information as follows: 
 - user name
 - comma and space `", "`
-- re-tweets 
+- likes 
 - comma and space `", "`
-- likes,
+- re-tweets
 - comma and space `", "`
 - replies
 - comma and space `", "`
@@ -377,65 +380,7 @@ It prints a row number with a period before each user name. Then, it prints all 
 
 ## Execution Sample
 
-```text
----------  Customers records entry ------------------
-
-Enter customer information (to exit, press Enter):
- Enter User name: zebaism
- Enter likes_count: 595
- Enter retweets_count: 234
- Enter replies_count: 27
- Enter share videos (y/n): n
-
-Enter customer information (to exit, press Enter):
- Enter User name: rohanv
- Enter likes_count: 12
- Enter retweets_count: 0
- Enter replies_count: 1
- Enter share videos (y/n): n
-
-Enter customer information (to exit, press Enter):
- Enter User name: frank
- Enter likes_count: 15
- Enter retweets_count: 2
- Enter replies_count: 0
- Enter share videos (y/n): n
-
-Enter customer information (to exit, press Enter):
- Enter User name: desibrah
- Enter likes_count: 39
- Enter retweets_count: 19
- Enter replies_count: 2
- Enter share videos (y/n): y
-
-Enter customer information (to exit, press Enter):
- Enter User name: sheetut
- Enter likes_count: 1
- Enter retweets_count: 0
- Enter replies_count: 3
- Enter share videos (y/n): y
-
-Enter customer information (to exit, press Enter):
- Enter User name:
----------------------------------------------------------
-                Users' tweets report
-   Name: re-tweets, likes, replies, share videos (y/n)
----------------------------------------------------------
-1. zebaism, 595, 234, 27, n
-
-2. rohanv, 12, 0, 1, n
-
-3. frank, 15, 2, 0, n
-
-4. desibrah, 39, 19, 2, y
-
-5. sheetut, 1, 0, 3, y
-
----------------------------------------------------------
-            Report was successfully created
-Dynamically allocated memory was successfully deallocated
----------------------------------------------------------
-```
+[`correct_output.txt`](DIY/correct_output.txt)
 
 ## Reflection
 
