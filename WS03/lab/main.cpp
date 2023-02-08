@@ -32,34 +32,34 @@ int main() {
 	Department SDDS{};
 
 	//Test1
-	cout << "**********Create Department TEST START**********" << endl;
+	cout << "**********Create Department TEST START**********" << endl << endl;
 	SDDS.createDepartment("School of Software development", testProject, 1);
 	display(SDDS);
-	cout << "**********Create Department TEST END**********" << endl;
+	cout << "**********Create Department TEST END**********" << endl << endl;
 
 	//Test2
-	cout << endl << "**********Update Name TEST Start**********" << endl;
+	cout << endl << "**********Update Name TEST Start**********" << endl << endl;
 	SDDS.updateName("School of Software development and design");
 	display(SDDS);
-	cout << "**********Update Name TEST END**********" << endl;
+	cout << "**********Update Name TEST END**********" << endl << endl;
 
 	//Test3
-	cout << endl << "**********Update Budget TEST Start**********" << endl;
+	cout << endl << "**********Update Budget TEST Start**********" << endl << endl;
 	SDDS.updateBudget(5555.99);
 	display(SDDS);
-	cout << "**********Update Budget TEST END**********" << endl;
+	cout << "**********Update Budget TEST END**********" << endl << endl;
 
 	//Test4
-	cout << endl << "**********Expenses and Remaining Budget TEST Start**********" << endl;
-	cout << "Our current total Expenses are: " << SDDS.totalexpenses() << endl;
-	cout << "Our remaining budget is: " << SDDS.remainingBudget() << endl;
-	cout << "**********Expenses and Remaining Budget TEST END**********" << endl;
+	cout << endl << "**********Expenses and Remaining Budget TEST Start**********" << endl << endl;
+	cout << "Our current total Expenses are: " << SDDS.totalexpenses() << endl << endl;
+	cout << "Our remaining budget is: " << SDDS.remainingBudget() << endl << endl;
+	cout << "**********Expenses and Remaining Budget TEST END**********" << endl << endl;
 
 	//Test5
-	cout << endl << "**********Add Project TEST START**********" << endl;
+	cout << endl << "**********Add Project TEST START**********" << endl << endl;
 	for (int i = 0; i < 5 && SDDS.addProject(myprojects[i]); i++);
 	display(SDDS);
-	cout << "**********Add Project TEST END**********" << endl;
+	cout << "**********Add Project TEST END**********" << endl << endl;
 	
 	SDDS.clearDepartment();
 	return 0;

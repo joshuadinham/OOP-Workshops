@@ -1,13 +1,14 @@
+#pragma once
 #ifndef SDDS_DEPARTMENT_H_
 #define SDDS_DEPARTMENT_H_
 namespace sdds {
 
-    const int MAX_TOPIC_LENGTH = 25;
+	const int MAX_TOPIC_LENGTH = 25;
 
-    struct Project {
-        char m_topic[MAX_TOPIC_LENGTH+1];
-        double m_cost;
-    };
+	struct Project {
+		char m_topic[MAX_TOPIC_LENGTH + 1];
+		double m_cost;
+	};
 
 	//class Department does here
 	class Department {
@@ -17,8 +18,6 @@ namespace sdds {
 		double budgetDepartment;
 
 	public:
-
-
 		//Constructor
 		Department();
 
@@ -47,22 +46,18 @@ namespace sdds {
 		Project* fetchProjects() const;
 
 		//calculate and return remaining budget of a department
-		double remainingBudget();
+		double reminaingBudget();
 
 		//use UpdateName, addProjet and updateBudget to set name of department, add a project to it and update  budget
 		void createDepartment(const char* newName, Project& newProject, double change);
 
 		//clear all dynamic memory of a department
 		void clearDepartment();
+
+		void display();
 	};
-	
-	
 
 	
-	
-	//helper functions - do not belong inside the class
-    void display(const Project& project);
-    void display(const Department& department);
 
-}
-#endif // !SDDS_DEPARTMENT_H_
+} 
+#endif //!SDDS_DEPARTMENT_H

@@ -1,9 +1,4 @@
-/*Joshua Dinham
-121752226
-BTP200 NAA
-All work was done by me
-*/
-
+#pragma
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
@@ -12,6 +7,7 @@ All work was done by me
 using namespace std;
 
 namespace sdds {
+	
 	Department::Department()
 	{
 		name = nullptr;
@@ -23,76 +19,65 @@ namespace sdds {
 	void Department::updateName(const char* newName)
 	{
 		
-		if (newName[0] == '\0' || newName == nullptr)
+		if (newName[0] == '\0' || newName == NULL)
 		{
 			cout << "Give input please!" << endl;
 			return;
 		}
 		else
 		{
-			delete[] this->name;
-			this->name = new char[strlen(newName) + 1];
-			strcpy(this->name, newName);
+			char* tempname = new char[strlen(newName) + 1];
+			strcpy(tempname, newName);
+			delete[] this->fetchName();
+			this->name = tempname;
 		}
 	}
 	//update budget of the department and add new change
 	void Department::updateBudget(double change)
 	{
-		this->budgetDepartment += change;
+		budgetDepartment = change;
 	}
 	//calculate and return the expenses  of a department
 	double Department::totalexpenses()
 	{
 		double totalCost = 0;
-
-		if (!(this->project == NULL))
+		for (int i = 0; i < this->numberOfProjects; i++)
 		{
-			for (int i = 0; i < this->numberOfProjects; i++)
-			{
-				totalCost += this->project[i].m_cost;
-			}
-
+			totalCost = totalCost += this->project[i].m_cost;
 		}
-		else
-		{
-			return 0;
-		}
-
-
-
 		return totalCost;
-
 	}
 
 	//Add new project is total cost !> allocated budget
 	bool Department::addProject(Project& newProject)
 	{
 		int size = this->fetchNumProjects();
-		if (newProject.m_cost > remainingBudget())
+		
+		if (totalexpenses() + newProject.m_cost > budgetDepartment)
 		{
+			cout << "Not enough budget for this project" << endl;
 			return false;
 		}
 		else
 		{
 			if (this->fetchNumProjects() == 0)
 			{
-				this->project = new Project[1];
 				this->project[0] = newProject;
 				this->numberOfProjects++;
 			}
 			else
 			{
-				Project* tempProjects = new Project[this->numberOfProjects + 1];
-				for (int i = 0; i < this->numberOfProjects; i++)
+				Project* tempProjects = new Project[this->fetchNumProjects() + 2];
+				for (int i = 0; i < this->fetchNumProjects()+1; i++)
 				{
 					tempProjects[i] = this->project[i];
-					if (i + 1 == this->numberOfProjects)
+					if (i+1 == this->fetchNumProjects()+1)
 					{
-						tempProjects[i + 1] = newProject;
+						tempProjects[i+1] = newProject;
 					}
 				}
 				delete[] this->project;
-				this->numberOfProjects += 1;
+				this->numberOfProjects = this->fetchNumProjects() + 1;
 
 				this->project = new Project[this->fetchNumProjects()];
 				for (int i = 0; i < this->fetchNumProjects(); i++)
@@ -100,6 +85,7 @@ namespace sdds {
 					this->project[i] = tempProjects[i];
 
 				}
+					
 				delete[] tempProjects;
 			}
 
@@ -110,7 +96,7 @@ namespace sdds {
 		}
 	}
 
-	//return numbere of projects a department is working on
+	//return number of projects a department is working on
 	int Department::fetchNumProjects() const
 	{
 		return this->numberOfProjects;
@@ -133,7 +119,7 @@ namespace sdds {
 	}
 
 	//calculate and return remaining budget of a department
-	double Department::remainingBudget()
+	double Department::reminaingBudget()
 	{
 		return this->budgetDepartment - totalexpenses();
 	}
@@ -141,11 +127,17 @@ namespace sdds {
 	//use UpdateName, addProjet and updateBudget to set name of department, add a project to it and update  budget
 	void Department::createDepartment(const char* newName, Project& newProject, double change)
 	{
-	
+		if (newName[0] == '\0' || newName == NULL)
+		{
+			cout << "Give input please!" << endl;
+			return;
+		}
+		else
+		{
 			this->updateName(newName);
 			this->addProject(newProject);
 			this->updateBudget(change);
-		
+		}
 	}
 
 	//clear all dynamic memory of a department
@@ -154,24 +146,19 @@ namespace sdds {
 		delete[] this->name;
 		delete[] this->project;
 	}
+   
+	void Department::display(){
+		cout << "The Department name is: " << name << endl;
+		cout << "The Department's budget is: " << budgetDepartment << endl;
+		cout << "The department's current project is: " << this->project->m_topic << " and the project's cost is: " << this->project->m_cost << ". The Department's total budget is " << this->budgetDepartment << " and after the cost of all projects it will be " << this->budgetDepartment - this->totalexpenses() << endl;
+		cout << "A list of All Projects: " << endl;
+		int i = 0;
 
-	//fully provided for students to display details of a project
-	void display(const Project& project) {
-		cout << "Project " << project.m_topic
-			<< " will cost a total of " << project.m_cost << " C$." << endl << endl;
-	}
-
-	//fully provided for students to display details of a department
-	void display(const Department& department) {
-		Project* temp = department.fetchProjects();
-		int projects = department.fetchNumProjects();
-		cout << "Department " << department.fetchName() << " details:" << endl << endl;
-		cout << "Budget: " << department.fetchBudget()
-			<< " and the number of projects in progress is: " << projects << endl << endl;
-		cout << "Below are the details of the projects we are currently working on: " << endl << endl;
-		for (int i = 0; i < projects; i++) {
-			display(temp[i]);
+		for (i = 0; i < this->numberOfProjects; i++)
+		{
+			cout << "[" << i+1 << "]: " << this->project[i].m_topic << " Cost: " << this->project[i].m_cost << endl;
 		}
 	}
+
 
 }
