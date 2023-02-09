@@ -128,9 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Store.cpp" />
+    <ClCompile Include="Toys.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Store.h" />
+    <ClInclude Include="Toys.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
