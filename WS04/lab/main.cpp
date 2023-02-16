@@ -13,9 +13,16 @@
 //
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTP200NAA
+Friday February 10 2022
+All Work completed by me
+*/
 #include<iostream>
 #include"Tournament.h"
-#include "SoccerTeam.h"
+#include "Soccer.h"
 
 using namespace std;
 using namespace sdds;
@@ -36,7 +43,7 @@ void printHeader(const char* title)
 }
 
 int main() {
-	
+
 	SoccerTeam st1[] = {
 		SoccerTeam(), //default constructor
 		SoccerTeam("",100.0,0), //3 argumnet constructor
@@ -47,7 +54,7 @@ int main() {
 	printHeader("T1: Checking Constructors of Soccer Team");
 	for (int i = 0; i < 3; i++) {
 		cout << i + 1 << ". ";
-		st1[i].display() <<endl;
+		st1[i].display() << endl;/*display() <<endl;*/
 	}
 	
 	Tournament t[] = {

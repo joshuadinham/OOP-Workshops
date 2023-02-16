@@ -18,7 +18,31 @@ using namespace std;
 #include "NameTag.h"
 using namespace sdds;
 int main() {
-   NameTag nt[6] = {  
+	/*NameTag name;
+	name.print();
+
+	NameTag name1("Simon Cowel is a fucking bastard", 10200);
+
+	name1.print();
+
+	for (int i = 0; i < 5; i++)
+	{
+		name1.read().print();
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	NameTag nt[6] = {  
       "A very very very long name to be cut short!!!", // one argument constructor
       {"Fred Soley", 12345} ,       // two argument constructor with good data
       {nullptr, 23456},    // two argument constructor with bad name
