@@ -1,0 +1,11 @@
+/*
+	Joshua dinham
+	121572226
+	BTP200NAA
+	Feb 23, 2023
+	All work is completed by me;
+*/
+
+This workshop was hard to grasp at first but with the help of the lectures, labs and textbook I was able to understand more about overloading Member and Helper Operators.
+
+The lab section of the workshop I coded entirely in a regular text editor and tried to keep syntax convensions the whole time. I was surprised that I had very little errors as I slowly moved over each function 1 at a time to the Visual Studio for testing purposes. I found that coding in a regular text editor first - without any IDE, helped me understand what is going on more thoroughly. I learned that overloading the operators helps me use the class instances as if they were fundamental data types like int, and double and bool ect. That makes it much easier to write readable code during implementation. Creating type conversion operators helped me to return a specific value of the class data member without having to use getters constantly. It is a really efficient way of using and manipulating the data members of a class without having to use functions.

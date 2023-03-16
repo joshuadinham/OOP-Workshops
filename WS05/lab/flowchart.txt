@@ -1,0 +1,262 @@
+Step by step process for workshop 5.1
+ constant values 
+	- const int regularEggWeight = 50
+	- const int jumboEggWeight = 75
+	- weight is in grams
+class EggCarton
+	- member variables
+		- int m_size
+		- int m_noOfEggs 
+		- bool m_jumboSize
+
+constructor default
+	- size = 6
+	- noOfSize = 0
+	- jumbo size = false;
+
+constructor overload
+	- size, noOfSize, jumboSize
+
+bool isBroken(int size,int noOfEggs) const
+	bool broken = true;
+	- size % 6 != 0;
+	- size < 0 || size > 36
+	- noOfEggs < 0 || noofEggs > size
+	return broken;
+
+void setBroken() 
+	if(isBroken)
+		size = -1
+		noOfEggs = -1
+
+bool() overload
+	- if(!isBroken())
+	{
+		ostream& EggCarton::displayCarton(int size, int noOfEggs, bool jumbo, ostream& ostr = cout) const
+			cartonwidth = size == 6 ? 3 : 6;
+			loop
+				display loop given just use that
+
+			return ostr
+	}
+	else
+	{
+		ostream& displayBroken(ostream& ostr = cout)
+		{
+			ostr << "Broken Egg Carton!" << endl;
+			return ostr;
+		}
+	}
+
+istream& read(istream& istr = cin)
+{
+	bool jbool = false;
+	char jumbo = ' '; // character to hold the jumbo
+	int size = 0;
+	int numOfEggs = 0;
+	istr >> istr.get(jumbo, 1, ','); //gets the first character until a comma
+	istr.ignore(); // ignores the next character
+	if(jumbo == 'j')
+	{
+		jbool == true;
+
+	}
+	else
+	{
+		jbool = false;
+	}
+	
+	istr.get(size, 4, ','); //gets the first number until comma;
+	istr.ignore(); //ignores next character
+	istr.get(numOfEggs, 4, ','); 
+
+	if(isBroken(size, numOfEggs))
+	{
+		setBroken();
+	}
+}
+
+operator bool() const
+{
+	bool valid = true;
+	valid = m_size % 6 == 0 && m_size > 0 && m_size <= 36 && m_noOfEggs >= 0 && m_noOfEggs <= m_size;
+	return valid;
+}
+
+operator int() const
+{
+	if (*this)
+	{
+		return m_noOfEggs;
+	}
+	else
+	{
+		return -1;
+	}
+}
+
+operator double() const
+{
+	double weight;
+	if(*this)
+	{	
+		if(m_jumboSize == true)
+		{
+			weight = m_noOfEggs * jumboEggWeight;
+		}
+		else
+		{
+			weight = m_noOfEggs * regularEggWeight;
+		}
+		return weight;
+	}
+	else
+	{
+		return -1.0;
+	}
+}
+
+EggCarton& operator--()
+{
+	if(*this)
+	{
+		m_noOfEggs--;
+	}
+	if(!*this)
+		{
+			setBroken();
+		}
+	return *this;
+}
+
+EggCarton& operator++()
+{
+	if(*this)
+	{
+		m_noOfEggs++;
+
+		if(!*this)
+		{
+			setBroken();
+		}
+	}
+	return *this;
+}
+
+EggCarton operator++(int)
+{
+	EggCarton egg = *this; //save the original
+	++(*this); //call the prefix operator;
+	return egg; //return the original;
+}
+
+EggCarton operator--(int)
+{
+	Eggcarton egg = *this; //save the orginal
+	++(*this); //call the prefix operator;
+	return egg; //return the original;
+}
+
+EggCarton& operator=(int value)
+{
+	if(*this)
+	{
+		m_noOfEggs = value;
+
+		if(!*this)
+		{
+			setBroken();
+		}
+	}
+	return *this;
+}
+
+EggCarton& operator+=(int value)
+{
+	if(*this)
+	{
+		m_noOfEggs+= value;
+
+		if(!*this)
+		{
+			setBroken();
+		}
+	}
+	return *this;
+}
+
+EggCarton& operator+=(EggCarton& right)
+{
+	if(*this && right)
+	{
+		int emptyL = 0; //amount of empty slots in the right object;
+		emptyL = m_size - m_noOfEggs; //set # of empty slots to be the max amount of eggs minus the amount of eggs
+		if(emptyL == 0)
+		{
+			return *this; //if there are no empty slots return the object;
+		}
+		else
+		{
+			if(right.m_numOfEggs >= emptyL)
+			{
+				(*this)+=emptyL;	
+			}
+			else if(right.m_numOfEggs < emptyL)
+			{
+				(*this)+=right.m_numOfEggs;
+			}
+			if(!*this)
+			{
+				setBroken();
+			}
+		}
+	}
+	return *this;
+}
+
+bool operator==(const EggCarton& right) const
+{
+	return double(*this) - double(right) == 0.0;
+}
+
+// ////////////Helper Functions///////////////
+
+
+int operator+(int left, const EggCarton& right)
+{
+	int sum = 0;
+	if(right)
+	{
+		sum = left + int(right);
+		return sum;
+	}
+	return int(left);
+}
+
+ostream& operator<<(ostream& ostr, const EggCarton& right)
+{
+	right.display(ostr);
+	return ostr;
+}
+
+istream& operator>>(istream& istr, EggCarton& right)
+{
+	right.read(istr);
+	return istr;
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+	

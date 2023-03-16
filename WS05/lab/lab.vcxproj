@@ -145,6 +145,13 @@
   <ItemGroup>
     <ClInclude Include="EggCarton.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="correct_output.txt" />
+    <Text Include="flowchart.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

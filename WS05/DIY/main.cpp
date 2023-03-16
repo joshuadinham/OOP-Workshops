@@ -9,7 +9,7 @@
 //
 // Revision History
 // -----------------------------------------------------------
-// Name            Date            Reason
+// Name  Joshua Dinham          Date   Feb 23 2023          Reason
 //
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
@@ -96,6 +96,7 @@ void unaryOperatorTest() {
    cout << (b1++ ? "Passenger added!" : "Bus full!") << endl;
    cout << (b2++ ? "Passenger added!" : "Bus full!") << endl;
    cout << "b1: " << int(b1) << endl;
+
    cout << "b2: " << int(b2) << endl;
    cout << "--------------------------------" << endl;
 

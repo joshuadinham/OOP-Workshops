@@ -3,7 +3,12 @@
 #include <iomanip>
 #include <string>
 #include "NameTag.h"
-
+/*
+Joshua Dinham
+121572226
+BTP200 NAA
+Feb 16 2023
+*/
 namespace sdds
 {
 	NameTag::NameTag()

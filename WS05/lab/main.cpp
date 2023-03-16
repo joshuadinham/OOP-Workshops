@@ -13,6 +13,14 @@
 //
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+
+/*
+    Joshua dinham
+    121572226
+    BTP200NAA
+    Feb 16, 2023
+    All work is completed by me;
+*/
 #include <iostream>
 #include "EggCarton.h"
 using namespace std;
@@ -116,33 +124,34 @@ void typeConversionTest() {
    cout << "END Type Conversion operator tests" << endl;
 }
 void IOTest() {
-   cout << endl << "Operator <<, Operator >>, display and read test" << endl;
-   EggCarton eggs[] = {
-      {},
-      {10},
-      {10,5},
-      {6,-1},
-      {42,10},
-      {36,37},
-      {6,4,true},
-      {6,4,false},
-      {18,10,true},
-      {18,10,false}
-   };
-   for (int i = 0; i < 10; i++) {
-      cout << eggs[i] << "----------" << endl;
-   }
-   cout << "Enter the following valid values:" << endl << " j,24,20" << endl << ">";
-   cin >> eggs[0];
-   cout << eggs[0] << "----------" << endl;
-   cout << "Enter the following valid values:" << endl << " r,24,20" << endl << ">";
-   cin >> eggs[0];
-   cout << eggs[0] << "----------" << endl;
-   cout << "Enter the following invalid values:" << endl << " j,44,20" << endl << ">";
-   cin >> eggs[0];
-   cout << eggs[0] << "----------" << endl;
-   cout << "Enter the following invalid values:" << endl << " j,24,40" << endl << ">";
-   cin >> eggs[0];
-   cout << eggs[0] << "----------" << endl;
-   cout << "END Operator <<, Operator >>, display and read test" << endl;
-}
+    cout << endl << "Operator <<, Operator >>, display and read test" << endl;
+    EggCarton eggs[] = {
+       {},
+       {10},
+       {10,5},
+       {6,-1},
+       {42,10},
+       {36,37},
+       {6,4,true},
+       {6,4,false},
+       {18,10,true},
+       {18,10,false}
+    };
+    for (int i = 0; i < 10; i++) {
+       cout << eggs[i] << "----------" << endl;
+    }
+    cout << "Enter the following valid values:" << endl << " j,24,20" << endl << ">";
+    cin >> eggs[0];
+    cout << eggs[0] << "----------" << endl;
+    cout << "Enter the following valid values:" << endl << " r,24,20" << endl << ">";
+    cin >> eggs[0];
+    cout << eggs[0] << "----------" << endl;
+    cout << "Enter the following invalid values:" << endl << " j,44,20" << endl << ">";
+    cin >> eggs[0];
+    cout << eggs[0] << "----------" << endl;
+    cout << "Enter the following invalid values:" << endl << " j,24,40" << endl << ">";
+    cin >> eggs[0];
+    cout << eggs[0] << "----------" << endl;
+    cout << "END Operator <<, Operator >>, display and read test" << endl;
+ }
+

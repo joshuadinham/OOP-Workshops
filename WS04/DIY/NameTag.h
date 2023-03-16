@@ -2,6 +2,12 @@
 #ifndef NAMETAG_H
 #include <iostream>
 #define MAX_NAMETAG 40
+/*
+Joshua Dinham
+121572226
+BTP200 NAA
+Feb 16 2023
+*/
 namespace sdds
 {
 	class NameTag

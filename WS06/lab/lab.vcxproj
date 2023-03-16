@@ -142,6 +142,7 @@
     <ClInclude Include="Numbers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\WS05\lab\labpracticeWk6.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Numbers.cpp" />
   </ItemGroup>
@@ -152,6 +153,7 @@
     <Text Include="numbers.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\readme.md" />
     <None Include="memoryResizing.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
