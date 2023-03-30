@@ -173,8 +173,10 @@ Displaying an invalid **Contact** object will be quietly ignored and no action w
 
 ## output
 
+
 <a href="lab/correct_output.txt" target="_blank">correct_output.txt</a>
 
+```
 ## Files needed for submission
 ```Text
 Tools.h
