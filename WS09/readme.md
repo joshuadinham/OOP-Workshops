@@ -172,15 +172,15 @@ Displaying an invalid **Contact** object will be quietly ignored and no action w
 ```C++
 /***********************************************************************
 // OOP244 Workshop 9:
-// File	w9_tester.cpp
+// File main.cpp
 // Version 1.0
-// Date	2021/11/19
-// Author	Fardad Soleimanloo
+// Data Winter of 2023
+// Author       Fardad Soleimanloo
 // Description
 //
 // Revision History
 // -----------------------------------------------------------
-// Name            Date            Reason
+// Name            Data            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 
@@ -200,7 +200,8 @@ int main() {
    Contact C;
    ifstream file("contacts.txt");
    cout << "Empty Contact: >" << C << "<" << endl;
-   cout << "Enter the following:" << endl
+   cout << "Copy and paste the following data entries..." << endl;
+   cout << "Enter the following (Correct Data Entry):" << endl
       << "Homer,Jay,Simpson" << endl
       << "70 the pond road,North York,ON,M3J3M6" << endl << endl;
    cout << "Name and address" << endl << "> ";
@@ -208,26 +209,26 @@ int main() {
    if (cin)
       cout << "OK!" << endl;
    else {
-      cout << "Date entry implemented incorrectly" << endl;
+      cout << "Data entry implemented incorrectly" << endl;
       cin.clear();
       cin.ignore(1000, '\n');
    }
    cout << "Contact:" << endl << C << endl << endl;
    //---------------------------------------
-   cout << "Enter the following:" << endl
+   cout << "Enter the following (With Bad Province):" << endl
       << "Homer,Jay,Simpson" << endl
       << "70 the pond road,North York,ONT,M3J3M6" << endl << endl;
    cout << "Name and address" << endl << "> ";
    cin >> C;
    if (cin)
-      cout << "Date entry implemented incorrectly" << endl;
+      cout << "Data entry implemented incorrectly" << endl;
    else {
       cin.clear();
       cin.ignore(1000, '\n');
    }
    cout << "Empty Contact: >" << C << "<" << endl << endl;
    //---------------------------------------
-   cout << "Enter the following:" << endl
+   cout << "Enter the following (With Bad Postal Code):" << endl
       << "Homer,Jay,Simpson" << endl
       << "70 the pond road,North York,ON,M3J 3M6" << endl << endl;
    cout << "Name and address" << endl << "> ";
@@ -238,7 +239,7 @@ int main() {
    }
    cout << "Empty Contact: >" << C << "<" << endl << endl;
    //---------------------------------------
-   cout << "Enter the following:" << endl
+   cout << "Enter the following (With Bad City):" << endl
       << "Homer,Jay,Simpson" << endl
       << "70 the pond road,,ON,M3J3M6" << endl << endl;
    cout << "Name and address" << endl << "> ";
@@ -249,7 +250,7 @@ int main() {
    }
    cout << "Empty Contact: >" << C << "<" << endl << endl;
    //---------------------------------------
-   cout << "Enter the following:" << endl
+   cout << "Enter the following (With Bad Street Address):" << endl
       << "Homer,Jay,Simpson" << endl
       << ",North York,ON,M3J3M6" << endl << endl;
    cout << "Name and address" << endl << "> ";
@@ -266,7 +267,6 @@ int main() {
    }
    return 0;
 }
-
 ```
 ## output
 
