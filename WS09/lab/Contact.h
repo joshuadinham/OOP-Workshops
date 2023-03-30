@@ -14,7 +14,7 @@ namespace sdds
 	public:
 		 Contact(){};
 		 Contact& operator=(const Contact&);
-		 Contact(Contact&);
+		 Contact(const Contact&);
 		 ~Contact();
 		 istream& read(istream&) override;
 		 ostream& write(ostream&) const override;
@@ -23,6 +23,6 @@ namespace sdds
 
 	};
 	istream& operator>>(istream&, Contact&);
-	ostream& operator<<(ostream&,Contact&);
+	ostream& operator<<(ostream&,const Contact&);
 }
 #endif // !SDDS_CONTACT_H
