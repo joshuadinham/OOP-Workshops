@@ -1,17 +1,22 @@
 /***********************************************************************
-// OOP244 Workshop 9:
-// File	main.cpp
-// Version 1.0
-// Data	Winter of 2023
-// Author	Fardad Soleimanloo
-// Description
-//
-// Revision History
-// -----------------------------------------------------------
-// Name            Data            Reason
-/////////////////////////////////////////////////////////////////
-***********************************************************************/
+ OOP244 Workshop 9:
+ File	main.cpp
+ Version 1.0
+ Data	Winter of 2023
+ Author	Fardad Soleimanloo
+ Description
 
+ Revision History
+ -----------------------------------------------------------
+ Name            Data            Reason
+///////////////////////////////////////////////////////////////
+***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTC200NAA
+All work completed by me
+*/
 #include <iostream>
 #include <fstream>
 #include "Contact.h"

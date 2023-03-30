@@ -11,6 +11,12 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTC200NAA
+All work completed by me
+*/
 #ifndef SDDS_TOOLS_H__
 #define SDDS_TOOLS_H__
 #include <iostream>

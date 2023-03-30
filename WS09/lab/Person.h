@@ -11,6 +11,13 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTC200NAA
+All work completed by me
+*/
+
 #ifndef SDDS_PERSON_H
 #define SDDS_PERSON_H
 
@@ -33,7 +40,9 @@ namespace sdds {
       virtual operator bool()const;
       // deallocates the dynamic memory
       virtual void operator~();
+  
    };
+
    std::istream& operator>>(std::istream& leftOperand, Person& rightOperand);
    std::ostream& operator<<(std::ostream& leftOperand, const Person& rightOperand);
 }

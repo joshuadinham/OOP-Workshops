@@ -11,7 +11,13 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTC200NAA
+All work completed by me
 
+*/
 #include "Tools.h"
 #include "Person.h"
 
@@ -59,6 +65,7 @@ namespace sdds {
       delete[] m_middleName;
       m_name = m_lastName = m_middleName = nullptr;
    }
+
 
    std::istream& operator>>(std::istream& leftOperand, Person& rightOperand) {
       return rightOperand.read(leftOperand);

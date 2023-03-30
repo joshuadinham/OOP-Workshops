@@ -11,6 +11,12 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+/*
+Joshua Dinham
+121572226
+BTC200NAA
+All work completed by me
+*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
