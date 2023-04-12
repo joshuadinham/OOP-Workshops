@@ -1,10 +1,25 @@
 /***********************************************************************
+<<<<<<< HEAD
  OOP244 Workshop 9:
  File	main.cpp
  Version 1.0
  Data	Winter of 2023
  Author	Fardad Soleimanloo
  Description
+=======
+// OOP244 Workshop 9:
+// File	main.cpp
+// Version 1.0
+// Date	Winter of 2023
+// Author	Fardad Soleimanloo
+// Description
+//
+// Revision History
+// -----------------------------------------------------------
+// Name            Data            Reason
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+>>>>>>> 156fbd7d2ef87c67818947e97ff834b27237f942
 
  Revision History
  -----------------------------------------------------------
